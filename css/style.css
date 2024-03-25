@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  font-family: "Fira Code", sans-serif;
+  color: white;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+  background-color: rgb(70, 70, 70);
+  height: 36px;
+}
+header div {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+header div:nth-child(1) {
+  background-color: #00C700;
+}
+header div:nth-child(2) {
+  background-color: #C78F00;
+}
+header div:nth-child(3) {
+  background-color: #C70000;
+}
+
+main {
+  display: grid;
+  grid-auto-flow: column;
+  height: auto;
+}
+main h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+}
+main #content {
+  background-color: rgb(34, 34, 34);
+  padding: 60px 250px 70px 60px;
+}
+main #content #logo {
+  position: relative;
+  left: -135px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+main #content #programming {
+  display: flex;
+  text-align: justify;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding-top: 100px;
+}
+main #donate {
+  background-color: rgb(70, 70, 70);
+  padding: 110px 250px 70px 60px;
+}
+main #donate aside {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  font-size: 22px;
+}
+main #donate h2 {
+  font-family: "Montserrat", sans-serif;
+}
+main #donate #h2-donate {
+  margin-top: -50px;
+  padding-bottom: 50px;
+}
+main #donate #doe {
+  padding: 50px 0 50px 0px;
+}
+main #donate #text {
+  text-align: left;
+}
+main #empty-color3 {
+  background-color: rgb(25, 25, 25);
+  width: 20vw;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding-top: 60px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.links-social {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  font-family: "Montserrat" sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: rgb(61, 26, 64);
+  height: 200px;
+  padding: 50px 0 200px 25vw;
+}/*# sourceMappingURL=style.css.map */
