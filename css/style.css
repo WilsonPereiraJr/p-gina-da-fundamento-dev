@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -40,71 +41,83 @@ header div:nth-child(3) {
 
 main {
   display: grid;
-  grid-auto-flow: column;
-  height: auto;
+  grid-template-areas: "area1 area2 area4" "area1 area3 area5";
+  grid-template-columns: 1fr minmax(400px, 900px) 1fr;
 }
-main h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  color: white;
-}
-main #content {
-  background-color: rgb(34, 34, 34);
-  padding: 60px 250px 70px 60px;
-}
-main #content #logo {
-  position: relative;
-  left: -135px;
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-}
-main #content #programming {
-  display: flex;
-  text-align: justify;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  padding-top: 100px;
-}
-main #donate {
-  background-color: rgb(70, 70, 70);
-  padding: 110px 250px 70px 60px;
-}
-main #donate aside {
-  display: flex;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  font-size: 22px;
-}
-main #donate h2 {
-  font-family: "Montserrat", sans-serif;
-}
-main #donate #h2-donate {
-  margin-top: -50px;
-  padding-bottom: 50px;
-}
-main #donate #doe {
-  padding: 50px 0 50px 0px;
-}
-main #donate #text {
-  text-align: left;
-}
-main #empty-color3 {
+main #empty-left {
+  grid-area: area1;
   background-color: rgb(25, 25, 25);
-  width: 20vw;
-  height: 100%;
 }
-
-.center {
+main #main-content {
+  grid-area: area2;
+  background-color: rgb(34, 34, 34);
+  padding: 55px;
+}
+main #main-content > div {
   display: flex;
   align-items: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  padding-top: 60px;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  position: relative;
+  left: -130px;
+}
+main #main-content > div h1 {
+  font: 900 40px "Montserrat", sans-serif;
+}
+main #main-content #context {
+  display: flex;
+  align-items: normal;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  padding-top: 50px;
+}
+main #main-content #context p {
+  text-align: justify;
+  font-size: 15px;
+}
+main #main-content aside {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  padding-top: 50px;
+}
+main #main-content aside p {
   font-size: 22px;
-  font-weight: 400;
+}
+main #donate-content {
+  grid-area: area3;
+  background-color: rgb(70, 70, 70);
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  font-size: 22px;
+}
+main #donate-content p {
+  padding: 28px 0;
+}
+main #donate-content #doacao {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 28px;
+}
+main #donate-content div a {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+main #empty-right-main {
+  grid-area: area4;
+  background-color: rgb(34, 34, 34);
+}
+main #empty-right-donate {
+  grid-area: area5;
+  background-color: rgb(70, 70, 70);
+}
+main span {
+  font: 900 30px "Montserrat", sans-serif;
 }
 
 .links-social {
@@ -114,13 +127,9 @@ main #empty-color3 {
   align-items: center;
 }
 
-span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: 900;
-}
-
 a {
+  font-size: 22px;
+  font-family: "Lato", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -133,4 +142,7 @@ footer {
   background-color: rgb(61, 26, 64);
   height: 200px;
   padding: 50px 0 200px 25vw;
+}
+footer a img {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */
