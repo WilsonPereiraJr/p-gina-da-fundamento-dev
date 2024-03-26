@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Fira Code", sans-serif;
+  font-family: "Fira Code", monospace;
   color: white;
 }
 
@@ -78,8 +78,8 @@ main #main-content #context p {
 main #main-content aside {
   display: flex;
   align-items: center;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
   padding-top: 50px;
 }
 main #main-content aside p {
@@ -91,8 +91,8 @@ main #donate-content {
   padding: 55px;
   display: flex;
   align-items: center;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
   font-size: 22px;
 }
 main #donate-content p {
@@ -145,4 +145,8 @@ footer {
 }
 footer a img {
   padding-right: 10px;
+}
+
+.justify {
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */
