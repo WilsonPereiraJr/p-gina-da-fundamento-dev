@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    font-family: "Fira Code", sans-serif;
+    font-family: "Fira Code", monospace;
     color: white;
 }
 
@@ -93,7 +93,7 @@ main {
         aside {
             display: flex;
             align-items: center;
-            column-gap: 28px;
+            column-gap: 50px;
             padding-top: 50px;
             p {
                 font-size: 22px;
@@ -109,7 +109,7 @@ main {
         padding: 55px;
         display: flex;
         align-items: center;
-        column-gap: 28px;
+        column-gap: 50px;
         font-size: 22px;
         
         
@@ -168,3 +168,6 @@ footer {
         padding-right: 10px;
     }
 }
+ .justify {
+    text-align: justify;
+ }
