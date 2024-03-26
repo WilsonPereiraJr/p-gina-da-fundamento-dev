@@ -30,6 +30,7 @@ header {
     padding: 10px;
     column-gap: 7px;
     background-color: $color2;
+    width: 100vw;
     height: 36px;
 
     div {
@@ -57,7 +58,11 @@ main {
         "area1 area3 area5";
     grid-template-columns: 1fr minmax(400px, 900px) 1fr;
     
-
+    hr {
+        display: none;
+        opacity: 0.05;
+        margin-top: 50px;
+    }
     #empty-left {
         grid-area: area1;
         background-color: $color3;
@@ -162,6 +167,7 @@ footer {
     row-gap: 20px;
     background-color: $color4;
     height: 200px;
+    width: 100vw;
     padding:50px 0 200px 25vw;
 
     a img {
@@ -171,3 +177,153 @@ footer {
  .justify {
     text-align: justify;
  }
+
+
+@media screen and (max-width: 1100px) {
+    main {
+    grid-template-columns: 90px minmax(300px, 900px) 90px;
+    }
+ };
+
+@media screen and (max-width: 850px) {
+    header {
+        width: 100%;    
+    }
+
+    main {
+        
+        hr {
+            display: block;
+        };
+
+        #main-content {
+            
+            & > div {
+                position: relative;
+                left: -100px;
+                h1 {
+                    font-size: 30px;
+                }
+                img {
+                    width: 100px;
+                }
+            }
+        
+            #context {
+                flex-direction: column;
+                row-gap: 50px;
+                & > div {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+
+
+            aside {
+                flex-direction: column;
+                row-gap: 50px;
+                p {
+                    font-size: 15px;
+                    text-align: justify;   
+                }
+            }
+        }
+    
+        span {
+            font-size: 22px;
+        }
+        
+        #donate-content {
+            flex-direction: column;
+            row-gap: 50px;
+            
+            aside {
+                row-gap: 0;
+                align-items: center;
+                
+                p, h2 {
+                    font-size: 12px;
+                }
+                & > div {
+                    display: flex;
+                    justify-content: center;
+
+                }
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            p {
+                padding:28px 0 ;
+            }
+            
+            
+        }
+    }
+    footer {
+        
+        row-gap: 12px;
+        background-color: $color4;
+        height: 200px;
+        width: 100vw;
+        padding:50px 0 150px 25vw;
+        
+        p {
+            font-size: 15px;
+        }
+        a img {
+            padding-right: 5px;
+        }
+    }     
+}
+@media screen and (max-width: 668px) {
+    main {
+        #main-content {
+            & > div {
+                flex-direction: column;
+                position: inherit;
+                h1 {
+                    font-size: 22px;
+                }
+            }
+            #context {
+                p {
+                    font-size: 9px;
+                }
+            }
+
+            aside {
+                p {
+                    font-size: 12px;
+                    text-align: justify;   
+                }
+            }
+            
+        }
+        span {
+            font-size: 16px;
+        }
+        #donate-content {
+            aside {
+                padding:10px;
+
+                p, h2 {
+                    font-size: 12px;
+                }
+            }
+            div a {
+                column-gap: 8px;
+            }
+        }
+    }
+    footer {
+        p {
+            font-size: 12px;
+        }
+    }
+    img {
+        transform: scale(0.8);
+    }
+}
