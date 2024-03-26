@@ -22,6 +22,7 @@ header {
   -moz-column-gap: 7px;
        column-gap: 7px;
   background-color: rgb(70, 70, 70);
+  width: 100vw;
   height: 36px;
 }
 header div {
@@ -43,6 +44,11 @@ main {
   display: grid;
   grid-template-areas: "area1 area2 area4" "area1 area3 area5";
   grid-template-columns: 1fr minmax(400px, 900px) 1fr;
+}
+main hr {
+  display: none;
+  opacity: 0.05;
+  margin-top: 50px;
 }
 main #empty-left {
   grid-area: area1;
@@ -141,6 +147,7 @@ footer {
   row-gap: 20px;
   background-color: rgb(61, 26, 64);
   height: 200px;
+  width: 100vw;
   padding: 50px 0 200px 25vw;
 }
 footer a img {
@@ -149,4 +156,116 @@ footer a img {
 
 .justify {
   text-align: justify;
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    grid-template-columns: 90px minmax(300px, 900px) 90px;
+  }
+}
+@media screen and (max-width: 850px) {
+  header {
+    width: 100%;
+  }
+  main hr {
+    display: block;
+  }
+  main #main-content > div {
+    position: relative;
+    left: -100px;
+  }
+  main #main-content > div h1 {
+    font-size: 30px;
+  }
+  main #main-content > div img {
+    width: 100px;
+  }
+  main #main-content #context {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #main-content #context > div {
+    display: flex;
+    justify-content: center;
+  }
+  main #main-content aside {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #main-content aside p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  main span {
+    font-size: 22px;
+  }
+  main #donate-content {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #donate-content aside {
+    row-gap: 0;
+    align-items: center;
+  }
+  main #donate-content aside p, main #donate-content aside h2 {
+    font-size: 12px;
+  }
+  main #donate-content aside > div {
+    display: flex;
+    justify-content: center;
+  }
+  main #donate-content h2 {
+    text-align: center;
+  }
+  main #donate-content p {
+    padding: 28px 0;
+  }
+  footer {
+    row-gap: 12px;
+    background-color: rgb(61, 26, 64);
+    height: 200px;
+    width: 100vw;
+    padding: 50px 0 150px 25vw;
+  }
+  footer p {
+    font-size: 15px;
+  }
+  footer a img {
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width: 668px) {
+  main #main-content > div {
+    flex-direction: column;
+    position: inherit;
+  }
+  main #main-content > div h1 {
+    font-size: 22px;
+  }
+  main #main-content #context p {
+    font-size: 9px;
+  }
+  main #main-content aside p {
+    font-size: 12px;
+    text-align: justify;
+  }
+  main span {
+    font-size: 16px;
+  }
+  main #donate-content aside {
+    padding: 10px;
+  }
+  main #donate-content aside p, main #donate-content aside h2 {
+    font-size: 12px;
+  }
+  main #donate-content div a {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+  img {
+    transform: scale(0.8);
+  }
 }/*# sourceMappingURL=style.css.map */
