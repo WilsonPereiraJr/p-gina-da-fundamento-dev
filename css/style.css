@@ -235,37 +235,37 @@ footer a img {
   }
 }
 @media screen and (max-width: 668px) {
+  main {
+    grid-template-columns: 0px minmax(300px, 500px) 0px;
+  }
   main #main-content > div {
     flex-direction: column;
     position: inherit;
   }
   main #main-content > div h1 {
-    font-size: 22px;
+    font-size: 30px;
   }
   main #main-content #context p {
-    font-size: 9px;
+    font-size: 15px;
   }
   main #main-content aside p {
-    font-size: 12px;
+    font-size: 15px;
     text-align: justify;
   }
   main span {
-    font-size: 16px;
+    font-size: 22px;
   }
   main #donate-content aside {
     padding: 10px;
   }
   main #donate-content aside p, main #donate-content aside h2 {
-    font-size: 12px;
+    font-size: 15px;
   }
   main #donate-content div a {
     -moz-column-gap: 8px;
          column-gap: 8px;
   }
   footer p {
-    font-size: 12px;
-  }
-  img {
-    transform: scale(0.8);
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
