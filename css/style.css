@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  color: white;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+  background-color: rgb(70, 70, 70);
+  width: 100%;
+  height: 36px;
+}
+header div {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+header div:nth-child(1) {
+  background-color: #00C700;
+}
+header div:nth-child(2) {
+  background-color: #C78F00;
+}
+header div:nth-child(3) {
+  background-color: #C70000;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "area1 area2 area4" "area1 area3 area5";
+  grid-template-columns: 1fr minmax(400px, 900px) 1fr;
+}
+main hr {
+  display: none;
+  opacity: 0.05;
+  margin-top: 50px;
+}
+main #empty-left {
+  grid-area: area1;
+  background-color: rgb(25, 25, 25);
+}
+main #main-content {
+  grid-area: area2;
+  background-color: rgb(34, 34, 34);
+  padding: 55px;
+}
+main #main-content > div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  position: relative;
+  left: -130px;
+}
+main #main-content > div h1 {
+  font: 900 40px "Montserrat", sans-serif;
+}
+main #main-content #context {
+  display: flex;
+  align-items: normal;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  padding-top: 50px;
+}
+main #main-content #context p {
+  text-align: justify;
+  font-size: 15px;
+}
+main #main-content aside {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding-top: 50px;
+}
+main #main-content aside p {
+  font-size: 22px;
+}
+main #donate-content {
+  grid-area: area3;
+  background-color: rgb(70, 70, 70);
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  font-size: 22px;
+}
+main #donate-content p {
+  padding: 28px 0;
+}
+main #donate-content #doacao {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 28px;
+}
+main #donate-content div a {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+main #empty-right-main {
+  grid-area: area4;
+  background-color: rgb(34, 34, 34);
+}
+main #empty-right-donate {
+  grid-area: area5;
+  background-color: rgb(70, 70, 70);
+}
+main span {
+  font: 900 30px "Montserrat", sans-serif;
+}
+
+.links-social {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  font-size: 22px;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  font-family: "Montserrat" sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: rgb(61, 26, 64);
+  height: 200px;
+  width: 100%;
+  padding: 50px 0 200px 25vw;
+}
+footer a img {
+  padding-right: 10px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    grid-template-columns: 90px minmax(300px, 900px) 90px;
+  }
+}
+@media screen and (max-width: 850px) {
+  header {
+    width: 100%;
+  }
+  main hr {
+    display: block;
+  }
+  main #main-content > div {
+    position: relative;
+    left: -100px;
+  }
+  main #main-content > div h1 {
+    font-size: 30px;
+  }
+  main #main-content > div img {
+    width: 100px;
+  }
+  main #main-content #context {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #main-content #context > div {
+    display: flex;
+    justify-content: center;
+  }
+  main #main-content aside {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #main-content aside p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  main span {
+    font-size: 22px;
+  }
+  main #donate-content {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  main #donate-content aside {
+    row-gap: 0;
+    align-items: center;
+  }
+  main #donate-content aside p, main #donate-content aside h2 {
+    font-size: 12px;
+  }
+  main #donate-content aside > div {
+    display: flex;
+    justify-content: center;
+  }
+  main #donate-content h2 {
+    text-align: center;
+  }
+  main #donate-content p {
+    padding: 28px 0;
+  }
+  footer {
+    row-gap: 12px;
+    background-color: rgb(61, 26, 64);
+    height: 200px;
+    width: 100vw;
+    padding: 50px 0 150px 25vw;
+  }
+  footer p {
+    font-size: 15px;
+  }
+  footer a img {
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width: 668px) {
+  main {
+    grid-template-columns: 0px minmax(300px, 98vw) 0px;
+  }
+  main #main-content > div {
+    flex-direction: column;
+    position: inherit;
+    row-gap: 28px;
+  }
+  main #main-content > div h1 {
+    font-size: 30px;
+  }
+  main #main-content #context p {
+    font-size: 15px;
+  }
+  main #main-content aside p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  main span {
+    font-size: 22px;
+  }
+  main #donate-content aside {
+    padding: 10px;
+  }
+  main #donate-content aside p, main #donate-content aside h2 {
+    font-size: 15px;
+  }
+  main #donate-content div a {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+  footer p {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
