@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 $color1:rgb(34, 34, 34);
 $color2: rgb(70, 70, 70);
 $color3:rgb(25, 25, 25);
@@ -16,13 +10,13 @@ $color4:rgb(61, 26, 64);
 }
 
 html {
-    font-size: 62,5%;
+    font-size: 10px;
 }
 
 body {
     font-family: "Fira Code", monospace;
     color: white;
-    // width: 100vw;
+    
 }
 
 header {
@@ -72,7 +66,7 @@ main {
     #main-content {
         grid-area: area2;
         background-color: $color1;
-        padding: 55px;
+        padding: 24px;
 
         & > div {
             display: flex;
@@ -92,12 +86,12 @@ main {
             column-gap: 28px;
             padding-top: 50px;
             p {
-                text-align: justify;
+
                 font-size: 15px;
             }
         }
 
-        aside {
+        article {
             display: flex;
             align-items: center;
             column-gap: 50px;
@@ -113,7 +107,7 @@ main {
     #donate-content {
         grid-area: area3;
         background-color: $color2;
-        padding: 55px;
+        padding: 24px;
         display: flex;
         align-items: center;
         column-gap: 50px;
@@ -148,10 +142,16 @@ main {
     }
 }
 
+.disabled {
+    cursor: default;
+
+}
+
 .links-social {
     column-gap: 5px;
     display: flex;
     align-items: center;
+    
 }
 
 a {
@@ -159,6 +159,10 @@ a {
     font-family: "Lato", sans-serif;
     text-decoration: none;
     color:white;
+    &:hover:not(.disabled) {
+        opacity: 60%;
+        transition: 400ms ease-in-out;
+     }
     
 }
 
@@ -176,14 +180,13 @@ footer {
         padding-right: 10px;
     }
 }
- .justify {
-    text-align: justify;
- }
+ 
 
+ 
 
 @media screen and (max-width: 1100px) {
     main {
-    grid-template-columns: 90px minmax(300px, 900px) 90px;
+        grid-template-columns: 90px minmax(300px, 900px) 90px;
     }
  };
 
@@ -222,12 +225,11 @@ footer {
 
 
 
-            aside {
+            article {
                 flex-direction: column;
                 row-gap: 50px;
                 p {
-                    font-size: 15px;
-                    text-align: justify;   
+                    font-size: 15px; 
                 }
             }
         }
@@ -240,7 +242,7 @@ footer {
             flex-direction: column;
             row-gap: 50px;
             
-            aside {
+            article {
                 row-gap: 0;
                 align-items: center;
                 
@@ -289,32 +291,32 @@ footer {
                 position: inherit;
                 row-gap: 28px;
                 h1 {
-                    font-size: 30px;
+                    font-size: 1.6rem;
                 }
             }
             #context {
                 p {
-                    font-size: 15px;
+                    font-size: 0.8rem;
                 }
             }
 
-            aside {
+            article {
                 p {
-                    font-size: 15px;
-                    text-align: justify;   
+                    font-size: 0.8rem;
+                    
                 }
             }
             
         }
         span {
-            font-size: 22px;
+            font-size: 1.2rem;
         }
         #donate-content {
-            aside {
+            article {
                 padding:10px;
 
                 p, h2 {
-                    font-size: 15px;
+                    font-size: 0.8rem;
                 }
             }
             div a {
@@ -324,9 +326,10 @@ footer {
     }
     footer {
         p {
-            font-size: 15px;
+            font-size: 0.8rem;
         }
     }
+    img {
+        transform: scale(0.8);
+    }
 }
-
-    
